@@ -6,7 +6,7 @@ function NavbarFooter() {
     <footer className="text-center mt-8">
       <p>
         &copy; 2025 &middot; Built with NextJs v15 &middot;
-        <Link href={"/sitemap"} />
+        <Link href={"/sitemap.xml"}>Sitemap</Link>
       </p>
     </footer>
   );

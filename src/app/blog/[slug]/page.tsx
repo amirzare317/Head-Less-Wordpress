@@ -5,8 +5,29 @@ import {
 } from "@/lib/queries";
 import Link from "next/link";
 
-type Prams = Promise<{ slug: string }>;
-type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+import type { Metadata, ResolvingMetadata } from "next";
+// ------------------ Meta data in next.js ----------------------
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const post = await getPostBySlug((await params).slug);
+  const previousImages = (await parent).openGraph?.images || [];
+  return {
+    title: post?.title.rendered,
+    description: post?.excerpt.rendered,
+    openGraph: {
+      images: ["/open-graph.jpg", ...previousImages],
+    },
+  };
+}
+// -----------------------------------------------
+export function Page({ params, searchParams }: Props) {}
 
 export default async function page({
   params,
