@@ -71,7 +71,7 @@ export interface ExtendedPost extends Post {
 export type LatestPostProps = {
   posts: Post[];
   currentPage?: number;
-  totoalPage?: number;
+  totalPages?: number;
   title?: string;
   searchTerm?: string;
   categories?: number;

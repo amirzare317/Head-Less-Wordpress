@@ -5,8 +5,8 @@ function page() {
     <div>
       <h1 className="text-xl mb-4">Contact us</h1>
       <p className="mb-6">
-        If you'd like to get in touch, please don't hesitate to reach out to us
-        using the information below.
+        If you&apos;d like to get in touch, please don&apos;t hesitate to reach
+        out to us using the information below.
       </p>
       <div className="flex flex-col md:flex-row justify-center mb-6">
         <div className="w-full md:w-1/3 mb-4">

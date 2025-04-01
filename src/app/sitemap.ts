@@ -1,5 +1,4 @@
 import { getAllPost } from "@/lib/queries";
-import { url } from "inspector";
 import type { MetadataRoute } from "next";
 
 const baseUrl = process.env.WORDPRESS_URL;
