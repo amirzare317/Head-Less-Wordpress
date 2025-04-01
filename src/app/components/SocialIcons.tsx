@@ -33,7 +33,7 @@ function SocialIcons() {
           >
             <Image
               key={item.alt}
-              src={`/social-icon/${item.image}`}
+              src={`/social-icons/${item.image}`}
               alt={item.alt}
               width={20}
               height={20}
